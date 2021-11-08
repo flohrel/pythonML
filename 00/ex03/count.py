@@ -1,3 +1,5 @@
+import string
+
 def text_analyzer(*args):
     '''
     Summarizes upper-case and lower-case letters, punctuation, and space characters in the text given as parameter.
@@ -16,7 +18,7 @@ def text_analyzer(*args):
         exit()
     upper = sum(1 for c in arg if c.isupper())
     lower = sum(1 for c in arg if c.islower())
-    punc = sum(1 for c in arg if c == '.' or c == ',' or c == ';' or c == '!' or c == '?')
+    punc = sum(1 for c in arg if c in string.punctuation)
     space = sum(1 for c in arg if c.isspace())
     print("The text contains", len(arg), "character" if len(arg) < 2 else "characters")
     print("-", upper, "upper", "letter" if upper < 2 else "letters")
