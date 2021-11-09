@@ -1,10 +1,8 @@
 import string
 
 def text_analyzer(*args):
-    '''
-    Summarizes upper-case and lower-case letters, punctuation, and space characters in the text given as parameter.
-    If no argument is given, reads from standard input.
-    '''
+    '''Summarizes upper-case and lower-case letters, punctuation, and space characters in the text given as parameter.
+    If no argument is given, reads from standard input.'''
     if len(args) > 1:
         print("ERROR")
         exit()
